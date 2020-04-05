@@ -1,0 +1,45 @@
+body
+{
+   font-family: 'Roboto', sans-serif;
+   font-size: 30px;
+}
+
+/*navbar*/
+.navbar-brand
+{
+   font-family: 'Lobster', cursive;
+   font-size: 40px;
+   line-height: 40px;
+}
+
+/*wrapper for sidebar and workspace*/
+.wrapper {
+   display: flex;
+   width: 100%;
+   align-items: stretch;
+}
+
+/*sidebar*/
+#button-1
+{
+   width: 65px;
+}
+
+/*workspace*/
+.workspace {
+   width: 100%;
+   padding: 100px;
+   min-height: 100vh;
+   transition: all 0.3s;
+
+}
+
+.back-wall
+{
+   height: 270px;
+   width: 350px;
+   background-color: gainsboro;
+   margin: auto;
+
+      
+}
