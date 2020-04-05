@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="description" content="Aplikacja do projektowania kuchni">
+   <meta name="author" content="Marek Jaczewski">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+   <title>Kitchen Designer</title>
+   
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/main.css">
+   
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   
+</head>
+
+<body>
+
+<!--   navbar   -->
+   <nav class="navbar navbar-light bg-primary">
+      <span class="navbar-brand ">Kitchen designer</span>
+   </nav>         
+<!--   wrapper for sidebar and workspace   -->
+   <div class="wrapper">
+<!--   side bar   -->
+      <nav class="nav flex-column bg-light p-3">
+<!--   height input group   -->
+         <div class="input-group input-group-sm mb-3">
+           <div class="input-group-prepend">
+             <button class="btn btn-primary" id="button-1">Height</button>
+           </div>
+           <input type="text" class="form-control" id="wall-height-input">
+         </div>
+<!--   width input group   -->
+         <div class="input-group input-group-sm mb-3">
+           <div class="input-group-prepend">
+             <button class="btn btn-primary" id="button-1">Width</button>
+           </div>
+           <input type="text" class="form-control" id="wall-width-input">
+         </div>
+      </nav>
+<!--   workspace   -->
+      <div class="workspace">
+         <div class="back-wall"> 
+                 <p id="values"></p>
+                 </div>
+
+      </div>
+   </div>
+     
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   <script src="js/wall.js"></script>
+
+
+</body>
+</html>
