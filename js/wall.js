@@ -25,10 +25,6 @@
       }
    }
    
-   
-   
-   
-   
    /* function matches the pair of inputs and objects by id, then resize div dimension to value from input field */
    function updateDivDimension(input) {
       var inputId = input.id;
