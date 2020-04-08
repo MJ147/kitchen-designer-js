@@ -1,11 +1,19 @@
 (function(){
   
 /** back wall **/
+      /* back wall height */
+   var backwallColorPicker = $('#back-wall-color-picker')[0];
+   var backWall = $('#back-wall')[0];
+   backwallColorPicker.addEventListener('focusin', function(event){
+      document.addEventListener('mousemove', function(event){
+         backWall.style.backgroundColor = backwallColorPicker.style.backgroundColor;
+      });   
+   });
+   
    /* back wall height */
    var backWallHeightInput = $('#back-wall-height-input')[0];
    backWallHeightInput.addEventListener('keyup', handleKeyUpOnWallHeightInput);
   
- 
    function handleKeyUpOnWallHeightInput(event) {
       if (event.keyCode === 13) {
          backWallHeightInput.value = chceckLimitsForValue(backWallHeightInput.value, 200, 350);
@@ -16,12 +24,12 @@
    /* back wall width */
    var backWallWidthInput = $('#back-wall-width-input')[0];
    backWallWidthInput.addEventListener('keyup', handleKeyUpOnWallWidthInput);
-  
  
    function handleKeyUpOnWallWidthInput(event) {
       if (event.keyCode === 13) {
          backWallWidthInput.value = chceckLimitsForValue(backWallWidthInput.value, 350, 700);
          updateDivDimension(backWallWidthInput)
+         updateCabinets();  
       }
    }
    
@@ -53,5 +61,7 @@
       var objectToChangeId = '#' + inputId.replace(/-height.*/,'').replace(/-width.*/,'')
       return objectToChangeId
    }
+   
+   
    
 })();
