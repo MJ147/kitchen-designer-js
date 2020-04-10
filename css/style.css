@@ -1,16 +1,29 @@
 body
 {
    font-family: 'Roboto', sans-serif;
-   font-size: 15
-      px;
+   font-size: 15px;
+}
+
+.no-border {
+    border: 0;
+    box-shadow: none;
 }
 
 /*navbar*/
-.navbar-brand
+#logo
 {
    font-family: 'Lobster', cursive;
    font-size: 40px;
    line-height: 40px;
+}
+
+#menu-title
+{
+   font-family: 'Lobster', cursive;
+   font-size: 25px;
+   line-height: 50px;
+   
+   text-align: center;
 }
 
 /*wrapper for sidebar and workspace*/
@@ -27,32 +40,73 @@ body
 }
 
 /*workspace*/
-.workspace {
+.workspace 
+{
    width: 100%;
    padding: 100px;
    min-height: 100vh;
    transition: all 0.3s;
 
 }
+
 /*wall*/
 #back-wall
 {
    height: 270px;
    width: 350px;
-   background-color: gainsboro;
    margin: auto;
+   display: flex;
+   flex-flow: column;
 }
 
-.no-border {
-    border: 0;
-    box-shadow: none;
+/****cabinets****/
+
+/*moulding*/
+#moulding
+{
+   height: 10px;
 }
 
-/*cabinet*/
-#cabinet
+/*upper-cabinters*/
+#upper-cabinets-wrapper
+{
+  flex-grow : 1;
+  display: inline-flex;
+}
+
+/*backsplash*/
+#backsplash
+{
+   height: 60px;
+}
+
+/*countertop*/
+#countertop
+{
+   height: 4px;
+   background-color: darkgray;
+}
+
+/*base-cabinet*/
+#base-cabinets-wrapper
 {
    height: 72px;
+   display: inline-flex; 
+}
+
+/*plinth*/
+#plinth
+{
+   height: 10px;
+}
+
+.cabinet
+{
+   height: 100%;
    width: 60px;
-   background-color:ghostwhite;
    display: inline-block;
+}
+.last-cabinet
+{
+  flex-grow : 1;
 }
