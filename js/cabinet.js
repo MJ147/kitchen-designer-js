@@ -1,14 +1,9 @@
 /** cabinets **/
+
 /* cabinets color */
 var cabinetColorPicker = $('#cabinets-color-picker')[0];
-var allCabinets = $('.cabinet, .last-cabinet, #plinth, #moulding');
 
-for (var i = 0; i < allCabinets.length; i++) {
-   pickerHandler(cabinetColorPicker, allCabinets[i]);
-}
-
-
-function updateCabinets() {
+function setInitialCabinets() {
    var baseCabinetsWrapper = $('#base-cabinets-wrapper');
    createCabinets(baseCabinetsWrapper);
 
@@ -16,9 +11,9 @@ function updateCabinets() {
    createCabinets(upperCabinetsWrapper);
    
    allCabinets = $('.cabinet, .last-cabinet, #plinth, #moulding');
-   for (var i = 0; i < allCabinets.length; i++) {
-      setColorFromPicker(cabinetColorPicker, allCabinets[i]);
-   }
+   
+   setColorFromPicker(cabinetColorPicker, allCabinets);
+   pickerHandler(cabinetColorPicker, allCabinets);
 }
 
 function createCabinets(cabinetsWrapper) {

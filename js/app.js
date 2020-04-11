@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-   updateCabinets();
-
+   setWalls();
+   setInitialCabinets();
+   $(function () {
+      $('[data-toggle="popover"]').popover()
+   })
 });
