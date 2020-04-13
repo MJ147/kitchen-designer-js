@@ -21,11 +21,11 @@ pickerHandler(backwallColorPicker,backwall);
 
 /* back wall height */
 backWallHeightInput.addEventListener('keyup', function(){ 
-      handleKeyUpOnWallDimInput(event, backwall, backWallHeightInput, 230, 300);
+      handleKeyUpOnWallDimInput(event, backwall, backWallHeightInput, 2300, 3000);
 });
 
 /* back wall width */
 var backWallWidthInput = $('#back-wall-width-input')[0];
 backWallWidthInput.addEventListener('keyup', function(){ 
-      handleKeyUpOnWallDimInput(event, backwall, backWallWidthInput, 120, 500);
+      handleKeyUpOnWallDimInput(event, backwall, backWallWidthInput, 1200, 5000);
 });
