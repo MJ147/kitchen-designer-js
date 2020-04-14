@@ -21,11 +21,17 @@ pickerHandler(backwallColorPicker,backwall);
 
 /* back wall height */
 backWallHeightInput.addEventListener('keyup', function(){ 
-      handleKeyUpOnWallDimInput(event, backwall, backWallHeightInput, 2300, 3000);
+   if (event.keyCode === 13) {
+      handleKeyUpOnWallDimInput(backwall, backWallHeightInput, 2300, 3000);
+   }
 });
 
 /* back wall width */
-var backWallWidthInput = $('#back-wall-width-input')[0];
 backWallWidthInput.addEventListener('keyup', function(){ 
-      handleKeyUpOnWallDimInput(event, backwall, backWallWidthInput, 1200, 5000);
+   if (event.keyCode === 13) {
+      handleKeyUpOnWallDimInput(backwall, backWallWidthInput, 1200, 5000);
+      setScale();   
+   }
 });
+
+createBrickPattern(wallSection,'blue');

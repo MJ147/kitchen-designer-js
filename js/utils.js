@@ -16,12 +16,11 @@ function setColorFromPicker(colorPicker, objectsToChange) {
 
 /* dimension input */
 
-function handleKeyUpOnWallDimInput(event, objectsToChange, input, min, max) {
-   if (event.keyCode === 13) {
-      input.value = chceckLimitsForValue(input.value, min, max);
-      updateDivDimension(input, objectsToChange)
-      setInitialCabinets();  
-   }
+function handleKeyUpOnWallDimInput(objectsToChange, input, min, max) {
+   input.value = chceckLimitsForValue(input.value, min, max);
+   updateDivDimension(input, objectsToChange)
+   setInitialCabinets();  
+
 }
 
 function updateDivDimension(input, objectsToChange) {
