@@ -57,10 +57,10 @@ body
 {
    width: 230px;
    background: repeating-linear-gradient(-45deg,
-                                         rgba(0, 0, 0, 0.38),
-                                         rgba(0, 0, 0, 0.38) 60px,
-                                         rgb(150, 150, 150) 11px,
-                                         rgb(150, 150, 150) 120px);
+                                         rgba(0, 0, 0, 0.23),
+                                         rgba(0, 0, 0, 0.23) 60px,
+                                         rgb(191, 191, 191) 11px,
+                                         rgb(191, 191, 191) 120px);
 }
 
 
@@ -73,29 +73,59 @@ body
 /****cabinets****/
 
 /*moulding*/
-#moulding
+#moulding-wrapper
 {
    height: 100px;
+}
+
+#main-cabinets-wrapper
+{
+   flex-grow : 1;
+   display: flex;
+}
+
+#fridge
+{
+   height: 1800px;
+}
+
+#cabinet-over-fridge
+{
+   flex-grow : 1;
+}
+
+#fridge-wrapper
+{
+   width: 600px;
+   display: flex;
+   flex-flow: column;
+}
+
+#cabinets-wrapper-1
+{
+/*   display: inline-block;*/
+   display: flex;
+   flex-flow: column;
+   flex-grow : 1;
 }
 
 /*upper-cabinters*/
 #upper-cabinets-wrapper
 {
-  flex-grow : 1;
-  display: inline-flex;
+   flex-grow : 1;
+   display: inline-flex;
 }
 
 /*backsplash*/
-#backsplash
+#backsplash-wrapper
 {
    height: 600px;
 }
 
 /*countertop*/
-#countertop
+#countertop-wrapper
 {
    height: 40px;
-   background-color: darkgray;
 }
 
 /*base-cabinet*/
@@ -106,7 +136,7 @@ body
 }
 
 /*plinth*/
-#plinth
+#plinth-wrapper
 {
    height: 100px;
 }
