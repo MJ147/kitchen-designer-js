@@ -27,31 +27,31 @@ function setInitialCabinets() {
 function createCabinetWrappers() {
    var backWall = $('#back-wall');
    backWall.empty();
-   backWall.append('<div class="global-color border border-secondary" id="moulding-wrapper"></div>');
-   backWall.append('<div class="border border-secondary" id="main-cabinets-wrapper"></div>');
-   backWall.append('<div class="global-color border border-secondary" id="plinth-wrapper"></div>');
+   backWall.append('<div class="global-color" id="moulding-wrapper"></div>');
+   backWall.append('<div id="main-cabinets-wrapper"></div>');
+   backWall.append('<div class="global-color" id="plinth-wrapper"></div>');
   
    var mainCabinetsWrapper = $('#main-cabinets-wrapper');
-   mainCabinetsWrapper.append('<div class="border border-secondary" id="fridge-wrapper"></div>');
-   mainCabinetsWrapper.append('<div class="border border-secondary" id="cabinets-wrapper-1"></div>'); 
+   mainCabinetsWrapper.append('<div id="fridge-wrapper"></div>');
+   mainCabinetsWrapper.append('<div id="cabinets-wrapper-1"></div>'); 
    
    var fridgeWrapper = $('#fridge-wrapper');
-   fridgeWrapper.append('<div class="global-color border border-secondary" id="cabinet-over-fridge"></div>');
-   fridgeWrapper.append('<div class="global-color border border-secondary" id="fridge"></div>');
+   fridgeWrapper.append('<div class="global-color" id="cabinet-over-fridge"></div>');
+   fridgeWrapper.append('<div class="global-color" id="fridge"></div>');
    
    var cabinetsWrapper1 = $('#cabinets-wrapper-1');
-   cabinetsWrapper1.append('<div class="global-color" id="upper-cabinets-wrapper"></div>');
+   cabinetsWrapper1.append('<div id="upper-cabinets-wrapper"></div>');
    cabinetsWrapper1.append('<div id="backsplash-wrapper"></div>');
    cabinetsWrapper1.append('<div id="countertop-wrapper"></div>');
-   cabinetsWrapper1.append('<div class="global-color" id="base-cabinets-wrapper"></div>');
+   cabinetsWrapper1.append('<div id="base-cabinets-wrapper"></div>');
 }
 
 function createCabinets(cabinetsWrapper) {
    cabinetsWrapper.empty();
    //create all 60cm width cabinets
-   for(var i = 0; i < (cabinetsWrapper[0].offsetWidth/600) - 1 ; i++) {
-      cabinetsWrapper.append('<div class="cabinet border border-secondary"></div>');    
+   for(var i = 0; i < (cabinetsWrapper[0].offsetWidth/60) - 1 ; i++) {
+      cabinetsWrapper.append('<div class="global-color cabinet"></div>');    
    }   
    //create last cabinet
-   cabinetsWrapper.append('<div class="last-cabinet border border-secondary"></div>');  
+   cabinetsWrapper.append('<div class="global-color last-cabinet"></div>');  
 }
