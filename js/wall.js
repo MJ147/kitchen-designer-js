@@ -22,16 +22,14 @@ pickerHandler(backwallColorPicker,backwall);
 /* back wall height */
 backWallHeightInput.addEventListener('keyup', function(){ 
    if (event.keyCode === 13) {
-      handleKeyUpOnWallDimInput(backwall, backWallHeightInput, 2300, 3000);
+      handleKeyUpOnWallDimInput(backwall, backWallHeightInput, 230, 300);
    }
 });
 
 /* back wall width */
 backWallWidthInput.addEventListener('keyup', function(){ 
    if (event.keyCode === 13) {
-      handleKeyUpOnWallDimInput(backwall, backWallWidthInput, 1200, 5000);
+      handleKeyUpOnWallDimInput(backwall, backWallWidthInput, 120, 500);
       setScale();   
    }
 });
-
-createBrickPattern(wallSection,'blue');

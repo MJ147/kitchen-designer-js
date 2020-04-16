@@ -10,7 +10,9 @@ function pickerHandler(colorPicker, objectsToChange) {
 
 function setColorFromPicker(colorPicker, objectsToChange) {
    for (var i = 0; i < objectsToChange.length; i++) {
-      objectsToChange[i].style.backgroundColor = colorPicker.style.backgroundColor;
+      var pickerColor = colorPicker.style.backgroundColor;
+      objectsToChange.css('background-color', pickerColor);
+      objectsToChange.css('border', 'solid 1px rgba(0, 0, 0, 0.05)');
    }
 }
 
