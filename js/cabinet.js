@@ -49,7 +49,7 @@ function createCabinetWrappers() {
 function createCabinets(cabinetsWrapper) {
    cabinetsWrapper.empty();
    //create all 60cm width cabinets
-   for(var i = 0; i < (cabinetsWrapper[0].offsetWidth/60) - 1 ; i++) {
+   for(var i = 0; i < (cabinetsWrapper[0].offsetWidth/120) - 1 ; i++) {
       cabinetsWrapper.append('<div class="global-color cabinet"></div>');    
    }   
    //create last cabinet

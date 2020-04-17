@@ -19,7 +19,7 @@ function setColorFromPicker(colorPicker, objectsToChange) {
 /* dimension input */
 
 function handleKeyUpOnWallDimInput(objectsToChange, input, min, max) {
-   input.value = chceckLimitsForValue(input.value, min, max);
+   input.value = chceckLimitsForValue(input.value*2, min*2, max*2);
    updateDivDimension(input, objectsToChange)
    setInitialCabinets();  
 
@@ -29,12 +29,12 @@ function updateDivDimension(input, objectsToChange) {
    var inputId = input.id;
    if (inputId.includes('height')) {
       for (var i = 0; i < objectsToChange.length; i++) {
-         objectsToChange[i].style.height = input.value + 'px'
+         objectsToChange[i].style.height = input.value*2 + 'px'
       }
    }
    if (inputId.includes('width')) {
       for (var i = 0; i < objectsToChange.length; i++) {
-         objectsToChange[i].style.width = input.value + 'px'
+         objectsToChange[i].style.width = input.value*2 + 'px'
       }
    }
 }
