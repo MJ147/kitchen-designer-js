@@ -3,7 +3,7 @@
 /* cabinets color */
 
 
-function setInitialCabinets() {
+function updateCabinets() {
    createCabinetWrappers();
    var baseCabinetsWrapper = $('#base-cabinets-wrapper');
    createCabinets(baseCabinetsWrapper);
@@ -11,7 +11,7 @@ function setInitialCabinets() {
    var upperCabinetsWrapper = $('#upper-cabinets-wrapper');
    createCabinets(upperCabinetsWrapper);
    
-   allCabinets = $('.global-color');
+   allCabinets = $('.global-color, .global-color-shadow');
    
    var cabinetColorPicker = $('#cabinets-color-picker')[0];
    setColorFromPicker(cabinetColorPicker, allCabinets);
@@ -29,7 +29,7 @@ function createCabinetWrappers() {
    backWall.empty();
    backWall.append('<div class="global-color" id="moulding-wrapper"></div>');
    backWall.append('<div id="main-cabinets-wrapper"></div>');
-   backWall.append('<div class="global-color" id="plinth-wrapper"></div>');
+   backWall.append('<div class="global-color-shadow" id="plinth-wrapper"></div>');
   
    var mainCabinetsWrapper = $('#main-cabinets-wrapper');
    mainCabinetsWrapper.append('<div id="fridge-wrapper"></div>');

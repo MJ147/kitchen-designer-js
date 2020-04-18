@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+   $('#staticBackdrop').modal('show')
+   
    scaleWorkspaceWithWindow();
-   setWalls();
-   setInitialCabinets();
    
    $(function () {
          $('[data-toggle="popover"]').popover()
