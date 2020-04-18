@@ -20,16 +20,23 @@ var backwallColorPicker = $('#back-wall-color-picker')[0];
 pickerHandler(backwallColorPicker,backwall);
 
 /* back wall height */
-backWallHeightInput.addEventListener('keyup', function(){ 
-   if (event.keyCode === 13) {
-      handleKeyUpOnWallDimInput(backwall, backWallHeightInput, 230, 300);
-   }
-});
+backWallHeightInput.addEventListener('keyup', enterKeyOnBackWallInputs);
+backWallHeightInput.addEventListener('focusout', focusoutOnBackWallInputs);
 
 /* back wall width */
-backWallWidthInput.addEventListener('keyup', function(){ 
+backWallWidthInput.addEventListener('keyup', enterKeyOnBackWallInputs);
+backWallWidthInput.addEventListener('focusout', focusoutOnBackWallInputs);
+
+function enterKeyOnBackWallInputs(event){
    if (event.keyCode === 13) {
-      handleKeyUpOnWallDimInput(backwall, backWallWidthInput, 120, 500);
+      handleKeyUpOnWallDimInput(backwall, this);
+      updateCabinets();
       setScale();   
    }
-});
+}
+
+function focusoutOnBackWallInputs(event){
+   handleKeyUpOnWallDimInput(backwall, this);
+   updateCabinets();
+   setScale();   
+}
